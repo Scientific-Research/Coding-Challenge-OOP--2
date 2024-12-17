@@ -23,6 +23,10 @@ const CarClass = class {
     this.make = make;
     this.speed = speed;
   }
+
+  get speedUS() {
+    return this.speed / 1.6; // 75
+  }
 };
 
 const BMW = new CarClass("BMW", 120);
