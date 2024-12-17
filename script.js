@@ -47,7 +47,11 @@ const CarClass = class {
   }
 };
 
-const BMW = new CarClass("BMW", 120);
+const Ford = new CarClass("Ford", 120);
 
-BMW.speedUS = 120;
-console.log(BMW);
+console.log(Ford.speedUS); // 75
+Ford.accelerate(); // 130
+Ford.brake(); // 125
+
+Ford.speedUS = 120;
+console.log(Ford);
