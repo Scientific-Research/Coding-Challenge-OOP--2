@@ -24,6 +24,17 @@ const CarClass = class {
     this.speed = speed;
   }
 
+  // adding the two methods:
+  accelerate() {
+    console.log((this.speed += 10)); // this keyword points to the object, on which the method will be called! => Object would be the Car here => BMW and Mercedes!
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  }
+
+  brake() {
+    console.log((this.speed -= 5));
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+  }
+
   get speedUS() {
     console.log(`${this.make} is going at ${this.speed} km/h`);
     return this.speed / 1.6; // 75 mi/h
