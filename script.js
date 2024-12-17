@@ -14,3 +14,17 @@ DATA CAR 1: 'Ford' going at 120 km/h
 GOOD LUCK 😀
 
 */
+
+// 1. Re-create challenge 1, but this time using an Es6 class;
+
+// Class Expression like function expression
+const CarClass = class {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+};
+
+const BMW = new CarClass("BMW", 120);
+
+console.log(BMW);
