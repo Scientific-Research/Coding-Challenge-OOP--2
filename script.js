@@ -25,12 +25,14 @@ const CarClass = class {
   }
 
   get speedUS() {
-    return this.speedInKm / 1.6; // 75
+    console.log(`${this.make} is going at ${this.speed} km/h`);
+    return this.speed / 1.6; // 75 mi/h
+    // return this.speed; // 75 mi/h
   }
 
   set speedUS(speed) {
     const speedInKm = speed * 1.6;
-    // this.speed = speedInKm / 1.6;
+    this.speed = speedInKm / 1.6;
   }
 };
 
