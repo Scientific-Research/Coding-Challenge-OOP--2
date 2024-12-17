@@ -25,10 +25,16 @@ const CarClass = class {
   }
 
   get speedUS() {
-    return this.speed / 1.6; // 75
+    return this.speedInKm / 1.6; // 75
+  }
+
+  set speedUS(speed) {
+    const speedInKm = speed * 1.6;
+    // this.speed = speedInKm / 1.6;
   }
 };
 
 const BMW = new CarClass("BMW", 120);
 
+BMW.speedUS = 120;
 console.log(BMW);
