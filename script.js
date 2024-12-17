@@ -42,16 +42,23 @@ const CarClass = class {
   }
 
   set speedUS(speed) {
-    const speedInKm = speed * 1.6;
-    this.speed = speedInKm / 1.6;
+    this.speed = speed * 1.6; // speed in km/h
+    // const speedInKm = speed * 1.6;
+    // this.speed = speedInKm / 1.6;
   }
 };
 
 const Ford = new CarClass("Ford", 120);
 
-console.log(Ford.speedUS); // 75
-Ford.accelerate(); // 130
-Ford.brake(); // 125
+console.log(Ford.speedUS); // 75 mi/h
 
-Ford.speedUS = 120;
-console.log(Ford);
+// We do a little bit acceleration
+Ford.accelerate(); // 130 km/h
+Ford.accelerate(); // 140 km/h
+
+// and now, we do a brake
+Ford.brake(); // 135 km/h
+
+// Setting the speed value in our setter:
+Ford.speedUS = 50; // 50 mi/h => 80 km/h
+console.log(Ford); // CarClass {make: 'Ford', speed: 80}
